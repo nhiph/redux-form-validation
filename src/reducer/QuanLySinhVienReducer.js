@@ -5,7 +5,7 @@ const stateDefault = {
 export const QuanLySinhVienReducer = (state = stateDefault, action) => {
     switch (action.type) {
         case 'THEM_SINH_VIEN': {
-            const mangSVUpdate= [...state.mangSinhVien.action.sinhVien];
+            const mangSVUpdate= [...state.mangSinhVien,action.sinhVien];
             console.log(mangSVUpdate);
             state.mangSinhVien = mangSVUpdate;
             return {...state};
